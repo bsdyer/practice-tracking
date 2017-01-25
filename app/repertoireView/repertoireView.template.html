@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row exercize-header">
+        <div class="col-md-12">
+            <h1>Repertoire</h1>
+            <h3>Below is a list of all your pieces</h3>
+            <p>Click on an piece to see its details, or click the edit button to make changes or the delete button to remove the piece</p>
+        </div>
+    </div>
+    <div ng-repeat="piece in $ctrl.allPieces">
+        <practice-item data="piece"></practice-item>
+    </div>
+</div>

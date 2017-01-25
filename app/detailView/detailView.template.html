@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Details for {{$ctrl.item.title}}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div ng-if="$ctrl.isExercise">
+            <div class="col-xs-12">
+                <img class="img-responsive" ng-src="{{$ctrl.item.asset}}">
+            </div>
+        </div>
+        <div ng-if="$ctrl.isPiece">
+            <div class="col-xs-12">
+                <a href="{{$ctrl.item.asset}}" target="_blank">View Score</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>{{$ctrl.item.comments}}</p>
+        </div>
+    </div>
+</div>

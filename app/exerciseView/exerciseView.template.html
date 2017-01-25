@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row exercize-header">
+        <div class="col-md-12">
+            <h1>Tehnical Exercises</h1>
+            <h3>Below is a list of all the exercises for you</h3>
+            <p>Click on an exercise to see its details, or click the edit button to make changes or the delete button to remove the exercise</p>
+        </div>
+    </div>
+    <div ng-repeat="exercise in $ctrl.allExercises">
+        <practice-item data="exercise"></practice-item>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app="practiceTracker">
+    <head>
+        <script src="https://use.fontawesome.com/f0287146ee.js"></script>
+        <link rel="stylesheet" href="/css/main.css">
+        <script src="/node_modules/angular/angular.js"></script>
+        <script src="/node_modules/angular-animate/angular-animate.js"></script>
+        <script src="/node_modules/angular-resource/angular-resource.js"></script>
+        <script src="/node_modules/angular-route/angular-route.js"></script>
+        <script src="app.module.js"></script>
+        <script src="app.config.js"></script>
+        <script src="common/common.module.js"></script>
+        <script src="common/user/user.module.js"></script>
+        <script src="common/user/user.service.js"></script>
+        <script src="common/exercises/exercises.module.js"></script>
+        <script src="common/exercises/exercises.service.js"></script>
+        <script src="common/repertoire/repertoire.module.js"></script>
+        <script src="common/repertoire/repertoire.service.js"></script>
+        <script src="header/header.module.js"></script>
+        <script src="header/header.component.js"></script>
+        <script src="home/home.module.js"></script>
+        <script src="home/home.component.js"></script>
+        <script src="todayView/todayView.module.js"></script>
+        <script src="todayView/todayView.component.js"></script>
+        <script src="repertoireView/repertoireView.module.js"></script>
+        <script src="repertoireView/repertoireView.component.js"></script>
+        <script src="login/login.module.js"></script>
+        <script src="login/login.component.js"></script>
+        <script src="practiceItem/practiceItem.module.js"></script>
+        <script src="practiceItem/practiceItem.component.js"></script>
+        <script src="exerciseView/exerciseView.module.js"></script>
+        <script src="exerciseView/exerciseView.component.js"></script>
+        <script src="detailView/detailView.module.js"></script>
+        <script src="detailView/detailView.component.js"></script>
+    </head>
+
+    <body>
+        <header></header>
+        <div ng-view></div>
+    </body>
+</html>

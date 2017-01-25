@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>What to practice today.</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>Today's Exercises</h3>
+            <h4>Scale for today:</h4>
+            <practice-item data="$ctrl.todayScale"></practice-item>
+            <h4>Exercise for today:</h4>
+            <practice-item data="$ctrl.todayExercise"></practice-item>
+            <a href="#!/exercises">See all exercises</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>Your current piece(s):</h3>
+            <div ng-repeat="piece in $ctrl.currentPieces">
+                <practice-item data="piece"></practice-item>
+            </div>
+            <a href="#!/repertoire">See all pieces</a>
+        </div>
+    </div>
+</div>
