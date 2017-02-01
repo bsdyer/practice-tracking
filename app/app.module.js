@@ -12,5 +12,6 @@ angular.module('practiceTracker', [
   'repertoireView',
   'practiceItem',
   'exerciseView',
-  'detailView'
+  'detailView',
+  'editView'
 ]);

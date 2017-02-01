@@ -28,6 +28,9 @@ angular.
         when('/exercise/:slug', {
           template: '<detail-view></detail-view>'
         }).
+        when('/edit/:type/:slug', {
+            template: '<edit-view></edit-view>'
+        }).
         otherwise('/home');
     }
   ]);
