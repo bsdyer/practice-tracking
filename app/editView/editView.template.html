@@ -9,7 +9,7 @@
             <div>
                 <label>Name: <input type="text" ng-model="$ctrl.item.name" /></label>
             </div>
-            <div>
+            <div ng-if="$ctrl.item.editType == 'exercise'">
                 <label>Type: <select ng-model="$ctrl.item.type"></label>
                     <option value="Scale">Scale</option>
                     <option value="Exercise">Exercise</option>

@@ -7,6 +7,7 @@ angular.
         controller: ['Exercises', 'Repertoire', '$routeParams', '$location',
             function EditViewController(Exercises, Repertoire, $routeParams, $location) {
                 var type = $routeParams.type;
+                console.log(type);
                 var slug = $routeParams.slug;
                 this.item = {};
 
@@ -20,7 +21,13 @@ angular.
                         this.item.current = res.current;
                     });
                 } else {
-
+                    Repertoire.getPiece(slug, (res) => {
+                        this.item.editType = "piece";
+                        this.item.name = res.name;
+                        this.item.imagePath = res.assetPath;
+                        this.item.comments = res.comments;
+                        this.item.current = res.current;
+                    });
                 }
             }
         ]
