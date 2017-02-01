@@ -8,5 +8,6 @@ module.exports = mongoose.model('Exercise', new Schema({
     type: String,
     name: String,
     comments: String,
-    imagePath: String
+    imagePath: String,
+    current: Boolean
 }));

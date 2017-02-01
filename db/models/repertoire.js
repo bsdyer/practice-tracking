@@ -8,5 +8,6 @@ module.exports = mongoose.model('Repertoire', new Schema({
     composer: String,
     name: String,
     comments: String,
-    assetPath: String
+    assetPath: String,
+    current: Boolean
 }));

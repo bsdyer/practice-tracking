@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var config = require('./config');
 var path = require('path');
 var contentUpdates = require('./contentUpdates');
+var cloudinary = require('cloudinary');
 
 var index = require('./index.js');
 var userApi = require('./api/userApi.js');
@@ -21,6 +22,12 @@ instance.on('error', console.error.bind(console, 'connection error:'));
 instance.once('open', function (callback) {
     console.log('Database up');
     contentUpdates();
+});
+
+cloudinary.config({
+    cloud_name: 'practice-tracking',
+    api_key: config.cloudinary_api_key,
+    api_secret: config.cloudinary_api_secret
 });
 
 var app = express();
