@@ -59,6 +59,19 @@ factory('Exercises', ['$http', function($http) {
         )
     }
 
+    api.updateExercise = function(exercise, cb) {
+        var updateObj = exercise;
+        updateObj.token = token;
+        return $http.post('/api/exercises/update/' + updateObj.slug, updateObj).then(
+            function success(res) {
+                cb('did it!');
+            },
+            function fail(res) {
+                cb('uh oh...');
+            }
+        );
+    }
+
     return api;
 }
 ]);

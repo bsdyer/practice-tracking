@@ -63,4 +63,21 @@ router.get('/getExercises', function(req, res, next) {
     });
 });
 
+router.post('/update/:slug', function(req, res, next) {
+    var exercise = req.body;
+    console.log(exercise);
+    var slug = req.params.slug;
+    Exercise.findOneAndUpdate({slug: slug}, exercise, {new: true}, function(err, doc) {
+        if (err) {
+            res.status(400);
+            res.json({
+                'msg': 'Update failed'
+            });
+        } else {
+            res.status(200);
+            res.json(doc);
+        }
+    });
+});
+
 module.exports = router;

@@ -22,7 +22,7 @@ angular.
                     Repertoire.getPiece(slug, (res) => {
                         this.item = {};
                         this.item.title = res.name;
-                        this.item.asset = res.assetPath;
+                        this.item.asset = res.imagePath;
                         this.item.comments = res.comments;
                     })
                 }

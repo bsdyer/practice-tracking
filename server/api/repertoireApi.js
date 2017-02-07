@@ -50,6 +50,23 @@ router.get('/getCurrentPieces', function(req, res, next) {
             res.json(pieces);
         }
     });
-
 });
+
+router.post('/update/:slug', function(req, res, next) {
+    var piece = req.body;
+    console.log(piece);
+    var slug = req.params.slug;
+    Repertoire.findOneAndUpdate({slug: slug}, piece, {new: true}, function(err, doc) {
+        if (err) {
+            res.status(400);
+            res.json({
+                'msg': 'Update failed'
+            });
+        } else {
+            res.status(200);
+            res.json(doc);
+        }
+    });
+});
+
 module.exports = router;

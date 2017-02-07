@@ -83,7 +83,7 @@ function UpdateContent() {
                 composer: 'Hietor Villa Lobos',
                 name: 'Prelude No. 4',
                 comments: 'Pay attention to the "cantabile" marking at the start of the B section',
-                assetPath: 'img/scores/prelude-4-villa-lobos.pdf'
+                imagePath: 'img/scores/prelude-4-villa-lobos.pdf'
             };
             var repertoireModel = new Repertoire(piece);
             repertoireModel.save();
@@ -98,7 +98,7 @@ function UpdateContent() {
                 composer: 'Luis Milan',
                 name: 'Pavan',
                 comments: 'Its a Renaissance piece, so make the sound is clear and make sure the scale passages are brought out',
-                assetPath: 'img/scores/pavan-luis-milan.pdf'
+                imagePath: 'img/scores/pavan-luis-milan.pdf'
             };
             var repertoireModel = new Repertoire(piece);
             repertoireModel.save();
@@ -113,7 +113,7 @@ function UpdateContent() {
                 composer: 'Johann Sebastian Bach, Arranged by John Duarte',
                 name: 'Cello Suite No. 3',
                 comments: 'Practice this very slow and make sure fingerings are precise and followed carefully',
-                assetPath: 'img/scores/cello-suite-3-bach.pdf'
+                imagePath: 'img/scores/cello-suite-3-bach.pdf'
             };
             var repertoireModel = new Repertoire(piece);
             repertoireModel.save();

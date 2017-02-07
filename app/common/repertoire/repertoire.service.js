@@ -37,6 +37,19 @@ factory('Repertoire', ['$http', function($http) {
         )
     }
 
+    api.updatePiece = function(piece, cb) {
+        var updateObj = piece;
+        updateObj.token = token;
+        return $http.post('/api/repertoire/update/' + updateObj.slug, updateObj).then(
+            function success(res) {
+                cb('did it!');
+            },
+            function fail(res) {
+                cb('uh oh...');
+            }
+        );
+    }
+
     return api;
 }
 ]);

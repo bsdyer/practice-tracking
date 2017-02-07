@@ -6,24 +6,29 @@
     </div>
     <div class="row">
         <div class="col-xs-12">
-            <div>
-                <label>Name: <input type="text" ng-model="$ctrl.item.name" /></label>
-            </div>
-            <div ng-if="$ctrl.item.editType == 'exercise'">
-                <label>Type: <select ng-model="$ctrl.item.type"></label>
-                    <option value="Scale">Scale</option>
-                    <option value="Exercise">Exercise</option>
-                </select>
-            </div>
-            <div>
-                <label>Image Url: <input type="text" ng-model="$ctrl.item.imagePath" /></label>
-            </div>
-            <div>
-                <label>Comments: <textarea ng-model="$ctrl.item.comments"></textarea></label>
-            </div>
-            <div>
-                <label>Current: <input type="checkbox" ng-model="$ctrl.item.current" /></label>
-            </div>
+            <form novalidate>
+                <div>
+                    <label>Name: <input type="text" ng-model="$ctrl.item.name" /></label>
+                </div>
+                <div ng-if="$ctrl.item.editType == 'exercise'">
+                    <label>Type: <select ng-model="$ctrl.item.type"></label>
+                        <option value="Scale">Scale</option>
+                        <option value="Exercise">Exercise</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Image Url: <input type="text" ng-model="$ctrl.item.imagePath" /></label>
+                </div>
+                <div>
+                    <label>Comments: <textarea ng-model="$ctrl.item.comments"></textarea></label>
+                </div>
+                <div>
+                    <label>Current: <input type="checkbox" ng-model="$ctrl.item.current" /></label>
+                </div>
+                <div>
+                    <input type="submit" ng-click="$ctrl.update()" value="Update" />
+                </div>
+            </form>
         </div>
     </div>
 </div>
